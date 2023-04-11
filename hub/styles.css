@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpg'); /* 背景画像を追加 */
+    background-size: cover; /* 背景画像を画面に合わせてリサイズ */
+    background-repeat: no-repeat; /* 背景画像の繰り返しを無効にする */
+    background-position: center; /* 背景画像を中央に配置 */
+    background-attachment: fixed; /* 背景画像をスクロール時に固定 */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	z-index: 10; /* main要素のz-indexを10に設定 */
+    position: relative; /* z-indexを適用するためにpositionを設定 */
+}
+
+.link-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link-list li {
+    margin: 1rem;
+}
+
+.link-card {
+    display: block;
+    text-decoration: none;
+    color: #4CAF50;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 4px;
+}
+
+.link-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.link-card h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0 0;
+}
+
+.link-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#bouncing-image {
+    position: fixed;
+    width: 100px; /* 画像の幅を変更する場合は、この値を調整してください */
+    pointer-events: none; /* 画像が他の要素のクリックイベントを妨げないようにする */
+	z-index: 5; /* 画像のz-indexを5に設定 */
+}
+
+#explosion {
+    position: fixed;
+    background-image: url('explosion.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    display: none;
+    z-index: 15;
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#search-box {
+    width: 50%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
